@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro'
+---
+
+<Layout title="404">
+  <div
+    class="inset-0 overflow-hidden bg-white bg-[url(src/images/rainbow-sq.jpg)] bg-auto bg-center bg-no-repeat pb-32 font-sans font-normal text-slate-800 antialiased lg:bg-[url(src/images/rainbow-rec.jpg)]"
+  >
+    <h2 class="mx-4 my-4 text-xl">404</h2>
+    <div class="flex justify-center pt-16">
+      <div>
+        <h3 class="m-4 text-lg">ページが見つかりません。</h3>
+        <div class="mt-16 flex justify-center">
+          <button
+            onclick="window.history.go(-1)"
+            class="group relative inline-flex items-center justify-center rounded-lg bg-gradient-to-br from-cyan-500 via-blue-500 to-indigo-700 p-0.5 text-xl text-blue-600 hover:text-white focus:outline-none focus:ring-4 focus:ring-blue-300"
+          >
+            <span
+              class="relative rounded-md bg-white px-12 py-2.5 transition-all duration-75 ease-in group-hover:bg-opacity-0"
+              >戻る</span
+            >
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

@@ -1,0 +1,30 @@
+.animated-link {
+  position: relative;
+  box-decoration-break: clone;
+  text-decoration: none;
+}
+
+.animated-link:hover:after {
+  transform: translateZ(0) scale(1);
+}
+
+.animated-link:after {
+  left: 0;
+  right: 0;
+  bottom: -3px;
+  content: '';
+  height: 2px;
+  position: absolute;
+  transform: translateZ(0) scaleX(0);
+  transform-origin: left center;
+  transition: all 0.15s ease-in-out;
+  background-image: linear-gradient(to right, #0ea5e9, #2563eb);
+}
+
+.animated-link.show:after {
+  transform: translateZ(0) scale(1);
+}
+.animated-link:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(147 197 253 / var(--tw-ring-opacity));
+}

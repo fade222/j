@@ -1,0 +1,44 @@
+---
+import LinkSkip from './LinkSkip.astro'
+import Menu from './Menu.astro'
+---
+
+<LinkSkip />
+<header class="grid grid-cols-6 text-slate-800">
+  <Menu />
+  <a href="/" class="col-span-4 flex items-center justify-self-center">
+    <svg class="ml-auto h-5 w-5" viewBox="0 0 24 24" fill="none">
+      <path
+        fill="#38BDF8"
+        fill-rule="evenodd"
+        d="M10.91 22.841c.195.17 1.985.17 2.18 0l10.73-8.93C23.985 13.77 24 13 24 13H0s.015.77.18.912l10.73 8.93Z"
+        clip-rule="evenodd"></path>
+      <path
+        fill="#1d4ed8"
+        fill-rule="evenodd"
+        d="M13.09 2.127c-.195-.17-1.985-.17-2.18 0L.18 11.057c-.164.141-.18.911-.18.911h24s-.015-.77-.18-.911l-10.73-8.93Z"
+        clip-rule="evenodd"></path>
+    </svg>
+    <h1 class="mx-2 whitespace-nowrap bg-clip-text text-lg font-black">
+      大岡山スクール
+    </h1>
+  </a>
+  <a href="/contact" class="col-span-1 p-2">
+    <svg
+      class="ml-auto h-5 w-5 stroke-current text-slate-800 hover:text-blue-500"
+      viewBox="0 0 24 24"
+      fill="none"
+    >
+      <path
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M22 18.344s-2.566 3.17-4.787 3.616c-2.22.445-7.106-2.872-10.224-6.71-2.646-3.258-4.444-8.774-3.888-9.807C3.656 4.411 6.257 2 6.257 2l3.85 3.913-1.678 2.08c-.556 5.161 4.81 9.204 8.142 8.172l2.172-1.634L22 18.343Z"
+      ></path>
+      <title>Contact</title>
+    </svg>
+  </a>
+</header>
+<div class="px-4">
+  <div class="w-auto rounded-sm border-b-2 border-blue-400" my-4></div>
+</div>
