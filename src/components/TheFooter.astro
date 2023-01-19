@@ -1,85 +1,90 @@
 <footer
   class="bg-gradient-to-br from-blue-900 via-blue-600 to-indigo-600 pt-4 pl-4 text-base text-white"
 >
-  <div class="md:grid md:grid-cols-3">
-    <ul class="mt-4">
-      <h2 class="mb-2 text-sm">Classes</h2>
-      <li class="p-2">
-        <img
-          alt=""
-          class="mr-2 inline-block h-6 w-6"
-          src="../images/icon-koma.svg"
-        />
-        <a class="animated-link" href="/soroban">珠算科</a>
-      </li>
-      <li class="p-2">
-        <img
-          alt=""
-          class="mr-2 inline-block h-6 w-6"
-          src="../images/icon-pencil.svg"
-        />
-        <a class="animated-link" href="/study">学習科</a>
-      </li>
-      <li class="p-2">
-        <img
-          alt=""
-          class="mr-2 inline-block h-6 w-6"
-          src="../images/icon-book.svg"
-        />
-        <a class="animated-link" href="/reading">読書科</a>
-      </li>
-    </ul>
-    <ul class="mt-4">
-      <h2 class="mb-2 text-sm">About us</h2>
-      <li class="p-2">
-        <img
-          alt=""
-          class="mr-2 inline-block h-6 w-6"
-          src="../images/icon-saftey.svg"
-        />
-        <a class="animated-link" href="/safety">安全性</a>
-      </li>
-      <li class="p-2">
-        <img
-          alt=""
-          class="mr-2 inline-block h-6 w-6"
-          src="../images/icon-company.svg"
-        />
-        <a class="animated-link" href="/company">会社概要</a>
-      </li>
-      <li class="p-2">
-        <img
-          alt=""
-          class="mr-2 inline-block h-6 w-6"
-          src="../images/icon-star.svg"
-        />
-        <a class="animated-link" href="/news">最新情報</a>
-      </li>
-    </ul>
-    <ul class="mt-4">
-      <h2 class="mb-2 text-sm">Contact</h2>
+  <ul class="mt-4 md:grid md:grid-cols-3">
+    <div>
+      <li class="text-sm">Classes</li>
+      <ul class="[&>li]:p-2">
+        <li>
+          <img
+            class="mr-2 inline-block h-6 w-6"
+            src="../images/icon-koma.svg"
+          />
+          <a class="animated-link" href="/soroban">珠算科</a>
+        </li>
+        <li>
+          <img
+            class="mr-2 inline-block h-6 w-6"
+            src="../images/icon-pencil.svg"
+            alt=""
+          />
+          <a class="animated-link" href="/study"> 学習科</a>
+        </li>
+        <li>
+          <img
+            class="mr-2 inline-block h-6 w-6"
+            src="../images/icon-book.svg"
+            alt=""
+          />
+          <a class="animated-link" href="/reading"> 読書科</a>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <li class="mt-4 text-sm md:mt-0">About us</li>
+      <ul class="[&>li]:p-2">
+        <li>
+          <img
+            class="mr-2 inline-block h-6 w-6"
+            src="../images/icon-saftey.svg"
+            alt=""
+          />
+          <a class="animated-link" href="/safety">安全性</a>
+        </li>
+        <li>
+          <img
+            class="mr-2 inline-block h-6 w-6"
+            src="../images/icon-company.svg"
+            alt=""
+          />
+          <a class="animated-link" href="/company">会社概要</a>
+        </li>
+        <li>
+          <img
+            class="mr-2 inline-block h-6 w-6"
+            src="../images/icon-star.svg"
+            alt=""
+          />
+          <a class="animated-link" href="/news">最新情報</a>
+        </li>
+      </ul>
+    </div>
 
-      <li class="p-2">
-        <img
-          alt=""
-          class="mr-2 inline-block h-6 w-6"
-          src="../images/icon-trial.svg"
-        />
-        <a class="animated-link" href="/free-trial">無料体験</a>
-      </li>
-      <li class="p-2">
-        <img
-          alt=""
-          class="mr-2 inline-block h-6 w-6"
-          src="../images/icon-phone.svg"
-        />
-        <a class="animated-link" href="/contact">お問い合わせ</a>
-      </li>
+    <ul>
+      <li class="mt-4 text-sm md:mt-0">Contact</li>
+      <ul class="[&>li]:p-2">
+        <li>
+          <img
+            class="mr-2 inline-block h-6 w-6"
+            src="../images/icon-trial.svg"
+            alt=""
+          />
+          <a class="animated-link" href="/free-trial">無料体験</a>
+        </li>
+        <li>
+          <img
+            class="mr-2 inline-block h-6 w-6"
+            src="../images/icon-phone.svg"
+            alt=""
+          />
+          <a class="animated-link" href="/contacts">お問い合わせ</a>
+        </li>
+      </ul>
     </ul>
-  </div>
-  <hr class="mx-4 mt-4 border-t border-sky-500" />
+  </ul>
+  <hr class="mx-4 mt-4 border-t border-sky-500 md:mt-8" />
   <!-- logo and back to tap -->
-  <div class="mt-2 grid grid-cols-6">
+  <div class="mt-2 grid grid-cols-6 md:mt-6">
     <a
       href="/"
       class="animated-link col-span-4 col-start-2 ml-auto mr-auto flex items-center"
@@ -99,7 +104,7 @@
       <h3 class="mx-2 whitespace-nowrap text-lg">大岡山スクール</h3>
     </a>
     <!-- back to top -->
-    <a href="#" class="col-span-1 ml-auto p-1">
+    <a href="#" class="col-span-1 ml-auto mr-4 p-1">
       <svg
         class="ml-1 mt-1 h-6 w-6 stroke-current text-white hover:text-blue-500"
         viewBox="0 0 32 32"
