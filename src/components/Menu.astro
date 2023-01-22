@@ -48,7 +48,6 @@ import LinkList from './LinkList.astro'
       // @ts-nocheck
       document.addEventListener('keydown', (evt) => {
         if (evt.key === 'Escape') {
-          console.log('Escape pressed')
           const menuElem = document.querySelector('#menu')
           menuElem.classList.remove('show-menu')
           menuElem.classList.add('hide-menu')
