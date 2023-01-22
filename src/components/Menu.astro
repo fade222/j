@@ -46,35 +46,35 @@ import LinkList from './LinkList.astro'
 
     <script>
       // @ts-nocheck
-      document.addEventListener('keydown', (evt) => {
-        if (evt.key === 'Escape') {
-          const menuElem = document.querySelector('#menu')
-          menuElem.classList.remove('show-menu')
-          menuElem.classList.add('hide-menu')
-          document.body.style.overflow = 'auto'
-          document.removeEventListener('keydown', evt)
-        }
-      })
-
-      document.querySelector('#menu-outside').addEventListener('click', () => {
+      const closeMenu = () => {
         const menuElem = document.querySelector('#menu')
         menuElem.classList.remove('show-menu')
         menuElem.classList.add('hide-menu')
         document.body.style.overflow = 'auto'
-      })
+      }
 
       document.querySelector('#menu-open').addEventListener('click', () => {
         const menuElem = document.querySelector('#menu')
         menuElem.classList.remove('hide-menu')
         menuElem.classList.add('show-menu')
         document.body.style.overflow = 'hidden'
+
+        document.addEventListener('keydown', (evt) => {
+          if (evt.key === 'Escape') {
+            closeMenu()
+            document.removeEventListener('keydown', evt)
+          }
+        })
+
+        document
+          .querySelector('#menu-outside')
+          .addEventListener('click', () => {
+            closeMenu()
+          })
       })
 
       document.querySelector('#menu-close').addEventListener('click', () => {
-        const menuElem = document.querySelector('#menu')
-        menuElem.classList.remove('show-menu')
-        menuElem.classList.add('hide-menu')
-        document.body.style.overflow = 'auto'
+        closeMenu()
       })
     </script>
 
