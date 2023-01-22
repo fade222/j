@@ -1,88 +1,12 @@
+---
+import LinkList from './LinkList.astro'
+---
+
 <footer
   class="bg-gradient-to-br from-blue-900 via-blue-600 to-indigo-600 pt-4 pl-4 text-base text-white"
 >
   <ul class="mt-4 md:grid md:grid-cols-3">
-    <ul>
-      <li class="text-sm">Classes</li>
-      <ul class="[&>li]:p-2">
-        <li>
-          <img
-            class="mr-2 inline-block h-6 w-6"
-            src="../images/icon-koma.svg"
-            alt=""
-          />
-          <a class="animated-link" href="/soroban">珠算科</a>
-        </li>
-        <li>
-          <img
-            class="mr-2 inline-block h-6 w-6"
-            src="../images/icon-pencil.svg"
-            alt=""
-          />
-          <a class="animated-link" href="/study"> 学習科</a>
-        </li>
-        <li>
-          <img
-            class="mr-2 inline-block h-6 w-6"
-            src="../images/icon-book.svg"
-            alt=""
-          />
-          <a class="animated-link" href="/reading"> 読書科</a>
-        </li>
-      </ul>
-    </ul>
-
-    <ul>
-      <li class="mt-4 text-sm md:mt-0">About us</li>
-      <ul class="[&>li]:p-2">
-        <li>
-          <img
-            class="mr-2 inline-block h-6 w-6"
-            src="../images/icon-saftey.svg"
-            alt=""
-          />
-          <a class="animated-link" href="/safety">安全性</a>
-        </li>
-        <li>
-          <img
-            class="mr-2 inline-block h-6 w-6"
-            src="../images/icon-company.svg"
-            alt=""
-          />
-          <a class="animated-link" href="/company">会社概要</a>
-        </li>
-        <li>
-          <img
-            class="mr-2 inline-block h-6 w-6"
-            src="../images/icon-star.svg"
-            alt=""
-          />
-          <a class="animated-link" href="/news">最新情報</a>
-        </li>
-      </ul>
-    </ul>
-
-    <ul>
-      <li class="mt-4 text-sm md:mt-0">Contact</li>
-      <ul class="[&>li]:p-2">
-        <li>
-          <img
-            class="mr-2 inline-block h-6 w-6"
-            src="../images/icon-trial.svg"
-            alt=""
-          />
-          <a class="animated-link" href="/free-trial">無料体験</a>
-        </li>
-        <li>
-          <img
-            class="mr-2 inline-block h-6 w-6"
-            src="../images/icon-phone.svg"
-            alt=""
-          />
-          <a class="animated-link" href="/contacts">お問い合わせ</a>
-        </li>
-      </ul>
-    </ul>
+    <LinkList />
   </ul>
 
   <hr class="mx-4 mt-4 border-t border-sky-500 md:mt-8" />
