@@ -5,7 +5,21 @@ import Menu from './Menu.astro'
 
 <LinkSkip />
 <header class="grid grid-cols-6 text-slate-800">
-  <Menu />
+  <a href="/contact" class="col-span-1 p-2" aria-label="お問い合わせ">
+    <svg
+      class="mr-auto h-5 w-5 stroke-current text-slate-800 hover:text-blue-500"
+      viewBox="0 0 24 24"
+      fill="none"
+    >
+      <path
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M22 18.344s-2.566 3.17-4.787 3.616c-2.22.445-7.106-2.872-10.224-6.71-2.646-3.258-4.444-8.774-3.888-9.807C3.656 4.411 6.257 2 6.257 2l3.85 3.913-1.678 2.08c-.556 5.161 4.81 9.204 8.142 8.172l2.172-1.634L22 18.343Z"
+      ></path>
+      <title></title>
+    </svg>
+  </a>
   <a href="/" class="col-span-4 flex items-center justify-self-center">
     <svg class="ml-auto h-5 w-5" viewBox="0 0 24 24" fill="none">
       <path
@@ -24,21 +38,7 @@ import Menu from './Menu.astro'
       大岡山スクール
     </h1>
   </a>
-  <a href="/contact" class="col-span-1 p-2">
-    <svg
-      class="ml-auto h-5 w-5 stroke-current text-slate-800 hover:text-blue-500"
-      viewBox="0 0 24 24"
-      fill="none"
-    >
-      <path
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        d="M22 18.344s-2.566 3.17-4.787 3.616c-2.22.445-7.106-2.872-10.224-6.71-2.646-3.258-4.444-8.774-3.888-9.807C3.656 4.411 6.257 2 6.257 2l3.85 3.913-1.678 2.08c-.556 5.161 4.81 9.204 8.142 8.172l2.172-1.634L22 18.343Z"
-      ></path>
-      <title>お問い合わせ</title>
-    </svg>
-  </a>
+  <Menu />
 </header>
 <div class="px-4">
   <div class="w-auto rounded-sm border-b-2 border-blue-400" my-4></div>

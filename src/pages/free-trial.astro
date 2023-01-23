@@ -3,29 +3,39 @@ import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout title="無料体験">
-  <h2 class="mx-4 my-4 text-xl">無料体験</h2>
-  <div class="flex bg-white text-slate-800">
-    <div class="mt-24 ml-auto mr-auto leading-relaxed tracking-wide md:text-lg">
-      <p class="">
-        そろばんも学習も<br />
-        無料体験できます。
-      </p>
-      <p class="mt-16 leading-relaxed tracking-wide">
-        無料体験をご希望の方は、<br />
-        お気軽にご連絡ください。
-      </p>
-      <!-- button -->
-      <div class="mt-24 text-center">
-        <a
-          href="/contact"
-          class="group relative inline-flex items-center justify-center rounded-lg bg-gradient-to-br from-cyan-500 via-blue-500 to-indigo-700 p-0.5 text-xl text-blue-600 hover:text-white focus:outline-none focus:ring-4 focus:ring-blue-300"
-        >
-          <span
-            class="rounded-md bg-white px-12 py-2.5 transition-all duration-75 ease-in group-hover:bg-opacity-0"
-            >お問い合わせ</span
+  <div
+    class="relative inset-0 overflow-hidden bg-[url(../images/rainbow-sq.jpg)] bg-[length:480px_480px] bg-center bg-no-repeat md:bg-[length:652px_452px] lg:bg-[url(../images/rainbow-rec.jpg)]"
+  >
+    <div
+      class="absolute inset-0 bg-[url(../images/grid.svg)] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"
+    >
+    </div>
+    <h2 class="mx-4 my-4 text-xl">無料体験</h2>
+    <div class="flex text-slate-800">
+      <div
+        class="mt-16 ml-auto mr-auto leading-relaxed tracking-wide md:text-lg"
+      >
+        <p class="">
+          そろばんも学習も<br />
+          無料体験できます。
+        </p>
+        <p class="mt-16 leading-relaxed tracking-wide">
+          無料体験をご希望の方は、<br />
+          お気軽にご連絡ください。
+        </p>
+        <!-- button -->
+        <div class="mt-24 text-center">
+          <a
+            href="/contact"
+            class="group relative inline-flex items-center justify-center rounded-lg bg-gradient-to-br from-cyan-500 via-blue-500 to-indigo-700 p-0.5 text-xl text-blue-600 hover:text-white focus:outline-none focus:ring-4 focus:ring-blue-300"
           >
-        </a>
-        <div class="py-12"></div>
+            <span
+              class="rounded-md bg-white px-12 py-2.5 transition-all duration-75 ease-in group-hover:bg-opacity-0"
+              >お問い合わせ</span
+            >
+          </a>
+          <div class="py-12"></div>
+        </div>
       </div>
     </div>
   </div>
