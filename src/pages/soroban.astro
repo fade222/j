@@ -48,29 +48,33 @@ import Layout from '../layouts/Layout.astro'
       <p class="mt-4 text-center text-lg text-slate-800 md:text-xl">
         そろばんの授業は塾が開いてる時間なら
         <br class="md:hidden" />
-        <span
-          class="rounded-xl bg-yellow-200 px-2 text-slate-800 underline decoration-sky-500 underline-offset-8"
+        <span class="rounded-xl bg-yellow-200 px-2 text-slate-800"
           >何回でも参加可能</span
         >
       </p>
+
+      <!-- horizontal lines -->
+      <div class="mx-auto mt-8 w-32 border-t border-sky-300"></div>
+      <div class="mx-auto mt-2 w-24 border-t border-sky-300"></div>
+      <div class="mx-auto mt-2 w-12 border-t border-sky-300"></div>
+      <div class="mx-auto mt-2 w-6 border-t border-sky-300"></div>
+      <div class="mx-auto mt-2 w-2 border-t border-sky-300"></div>
+
+      <!-- timetable      -->
       <div class="px-4 md:px-20 xl:mx-auto xl:mt-4 xl:w-1/2 xl:px-0">
-        <table class="table-collapse mt-4 w-full text-left text-sm">
+        <table class="table-collapse mt-2 w-full text-left text-sm">
           <tr>
-            <th class="p-1 pt-8 font-bold text-blue-900"> 授業詳細</th>
-            <th class="p-1 pt-8 font-bold text-blue-900"></th>
+            <th class="p-1 pt-8 font-bold"> 授業詳細</th>
+            <th class="p-1 pt-8 font-bold"></th>
           </tr>
           <tr>
-            <td class="border-t border-gray-300 p-1 text-blue-900">
-              授業時間</td
-            >
+            <td class="border-t border-gray-300 p-1"> 授業時間</td>
             <td class="border-t border-gray-300 text-right">
               ４０分～６０分程度
             </td>
           </tr>
           <tr>
-            <td class="border-t border-gray-300 p-1 text-blue-900">
-              授業開始</td
-            >
+            <td class="border-t border-gray-300 p-1"> 授業開始</td>
             <td class="border-t border-gray-300 text-right">
               午後３時３０分～
               <br />
@@ -78,19 +82,17 @@ import Layout from '../layouts/Layout.astro'
             </td>
           </tr>
           <tr>
-            <td class="border-t border-gray-300 p-1 text-blue-900"> 授業日</td>
+            <td class="border-t border-gray-300 p-1"> 授業日</td>
             <td class="border-t border-gray-300 text-right"> 月・火・木・金</td>
           </tr>
           <tr>
-            <td class="border-t border-gray-300 p-1 text-blue-900">
-              授業回数</td
-            >
+            <td class="border-t border-gray-300 p-1"> 授業回数</td>
             <td class="border-t border-gray-300 text-right">
               週１回～３回（ご希望に合わせて）
             </td>
           </tr>
           <tr>
-            <td class="border-t border-gray-300 p-1 text-blue-900"> 対象</td>
+            <td class="border-t border-gray-300 p-1"> 対象</td>
             <td class="border-t border-gray-300 text-right">
               幼稚園児から社会人まで
             </td>
@@ -98,6 +100,6 @@ import Layout from '../layouts/Layout.astro'
         </table>
       </div>
     </div>
-    <div class="pt-16"></div>
+    <div class="pt-24"></div>
   </div>
 </Layout>
