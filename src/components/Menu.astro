@@ -18,7 +18,7 @@ import LinkList from './LinkList.astro'
   </button>
   <section
     id="menu"
-    class="hide-menu border-primary-main fixed top-0 left-0 z-10 flex h-full w-full bg-black/75 transition-transform"
+    class="hide-menu border-primary-main invisible fixed top-0 left-0 z-10 flex h-full w-full bg-black/75 transition-transform"
   >
     <button class="h-full w-1/4" id="menu-outside" aria-label="メニューを閉じる"
     ></button>
@@ -50,15 +50,15 @@ import LinkList from './LinkList.astro'
       // @ts-nocheck
       const closeMenu = () => {
         const menuElem = document.querySelector('#menu')
-        menuElem.classList.remove('show-menu')
-        menuElem.classList.add('hide-menu')
+        menuElem.classList.remove('show-menu', 'visible')
+        menuElem.classList.add('hide-menu', 'invisible')
         document.body.style.overflow = 'auto'
       }
 
       document.querySelector('#menu-open').addEventListener('click', () => {
         const menuElem = document.querySelector('#menu')
-        menuElem.classList.remove('hide-menu')
-        menuElem.classList.add('show-menu')
+        menuElem.classList.remove('hide-menu', 'invisible')
+        menuElem.classList.add('show-menu', 'visible')
         document.body.style.overflow = 'hidden'
 
         document.addEventListener('keydown', (evt) => {
