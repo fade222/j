@@ -4,15 +4,10 @@
   background-position: 0 100%;
   background-repeat: no-repeat;
   transition: background-size 0.2s ease-in-out;
-  background-image: linear-gradient(to right, #0ea4e9a3, #0ea4e942);
+  background-image: linear-gradient(to top, #0ea4e9a3, #93c5fd);
 }
 
 .animated-link:hover {
   background-size: 100% 3px;
   background-position: 20 100%;
-}
-
-.animated-link:focus {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(147 197 253 / var(--tw-ring-opacity));
 }
