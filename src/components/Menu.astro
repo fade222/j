@@ -4,7 +4,7 @@ import LinkList from './LinkList.astro'
 
 <nav class="relative z-10 flex text-base text-slate-800 md:text-lg">
   <button
-    class="ml-auto bg-white p-2"
+    class="ml-auto rounded-lg bg-white p-2 focus:outline-none focus:ring-4 focus:ring-blue-300"
     id="menu-open"
     aria-label="メニューを開く"
   >
@@ -20,12 +20,14 @@ import LinkList from './LinkList.astro'
     id="menu"
     class="hide-menu border-primary-main invisible fixed top-0 left-0 z-10 flex h-full w-full bg-black/75 transition-transform"
   >
+    <!-- click background to close -->
     <button class="h-full w-1/4" id="menu-outside" aria-label="メニューを閉じる"
     ></button>
+    <!-- close button -->
     <div class="h-full w-3/4 bg-white pb-24 drop-shadow-2xl">
       <div class="flex">
         <button
-          class="ml-auto p-2"
+          class="ml-auto rounded-lg p-2 focus:outline-none focus:ring-4 focus:ring-blue-300"
           id="menu-close"
           aria-label="メニューを閉じる"
         >
