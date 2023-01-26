@@ -1,5 +1,6 @@
 ---
 import Menu from './Menu.astro'
+import SkipLink from './SkipLink.astro'
 ---
 
 <header class="flex items-center text-slate-800">
@@ -18,14 +19,7 @@ import Menu from './Menu.astro'
     </svg>
   </a>
   <!-- skiplink -->
-  <div class="absolute left-12">
-    <a
-      href="#main"
-      class="sr-only p-2 font-bold text-slate-800 focus:not-sr-only"
-    >
-      本文へ</a
-    >
-  </div>
+  <SkipLink />
 
   <!-- title -->
   <a href="/" class="mr-auto flex items-center">
