@@ -1,5 +1,4 @@
 ---
-import PatternLines from '../components/PatternLines.astro'
 import Layout from '../layouts/Layout.astro'
 const entries = await Astro.glob('../content/news/*.md')
 const sortedEntries = entries.sort(
@@ -34,6 +33,5 @@ const sortedEntries = entries.sort(
       </div>
     </div>
     <div class="mt-16"></div>
-    <PatternLines />
   </div>
 </Layout>
