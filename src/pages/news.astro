@@ -1,112 +1,36 @@
 ---
 import Layout from '../layouts/Layout.astro'
+const entries = await Astro.glob('../content/news/*.md')
+const sortedEntries = entries.sort(
+  (a, b) =>
+    Date.parse(b.frontmatter.publishDate) -
+    Date.parse(a.frontmatter.publishDate)
+)
 ---
 
 <Layout title="最新情報">
   <div class="bg-white pb-20 text-gray-900">
     <h2 class="mx-4 my-4 text-xl">最新情報</h2>
-    <div class="pt-8 md:pt-16 xl:mx-64">
-      <article class="border-b-2 border-gray-300 px-4 pt-8 pb-8 tracking-wide">
-        <div class="md:pl-16">
-          <div class="flex items-baseline">
-            <h2 class="font-bold text-slate-800">
-              冬休みのお知らせ
-              <small class="pl-1 text-xs tracking-tighter text-gray-500">
-                ２０２２年１２月２１日
-              </small>
-            </h2>
-          </div>
-          <div class="text-sm">
-            <p class="pt-2">
-              １２月２４日（土）～１月５日（木）までお休みです。
-            </p>
-            <p class="pt-4">１月６日（金）１６：２０から新学期スタートです。</p>
-            <p class="pt-4">詳細はご連絡ください。</p>
-          </div>
-        </div>
-      </article>
-      <article class="border-b-2 border-gray-300 px-4 pt-8 pb-8 tracking-wide">
-        <div class="md:pl-16">
-          <div class="flex items-baseline">
-            <h2 class="font-bold text-slate-800">
-              新学年のスタート
-              <small class="pl-1 text-xs tracking-tighter text-gray-500">
-                ２０２２年８月２２日
-              </small>
-            </h2>
-          </div>
-          <div class="text-sm">
-            <p class="pt-2">
-              いよいよ新学期が始まります。<br />
-              大岡山スクールがあなたの成長を助けます。<br />
-              ９月１日（木）３：４５ＰＭ～ スタート<br />
-            </p>
-            <div class="mt-4 mb-4 rounded-md bg-blue-100 pl-2">
-              秋の特典→スクール入塾者先着7名様に限り、入学金減額<br />
-              （珠）￥７，７００ → ￥５，５００<br />
-              （学）￥１６，５００ → ￥１３，２００
-            </div>
-            <p class="pt-4">詳細はご連絡ください。</p>
-          </div>
-        </div>
-      </article>
-      <article class="border-b-2 border-gray-300 px-4 pt-8 pb-8 tracking-wide">
-        <div class="md:pl-16">
-          <div class="flex items-baseline">
-            <h2 class="font-bold text-slate-800">
-              今年のスクールの夏の予定
-              <small class="pl-1 text-xs tracking-tighter text-gray-500">
-                ２０２２年５月７日
-              </small>
-            </h2>
-          </div>
-          <div class="text-sm">
-            <p class="pt-2">
-              今年はスクールの夏休み以外は、<br />
-              通常授業を行います。<br />
-              <br />
-              夏休み⇒７／２５（月）～８／３（水）・８／２９（月）・８／３０（火）<br
-              />
-              <br />
-              夏期講習会⇒１０ＡＭ～４：３０ＰＭ<br />
-              ７／２５・７／２６・７／２８・７／２９・８／１・８／２の６日間<br
-              />
-              【欠席の場合は振替あり】【オンライン要相談】<br />
-              <br />
-              この講座は、とても人気がありますので、<br />
-              先着順に１２名程度で締め切ります。<br />
-              受付開始中です。<br />
-              <br />
-              コロナ対策は万全に対応しています。<br />
-              ご安心してお預けください。<br />
-              <br />
-              只今、お友達紹介キャンペーン実施中です。
-            </p>
-
-            <p class="pt-4">詳細はご連絡ください。</p>
-          </div>
-        </div>
-      </article>
-      <article class="border-b-2 border-gray-300 px-4 pt-8 pb-8 tracking-wide">
-        <div class="md:pl-16">
-          <div class="flex items-baseline">
-            <h2 class="font-bold text-slate-800">
-              新学年のスタート
-              <small class="pl-1 text-xs tracking-tighter text-gray-500">
-                ２０２２年４月１０日
-              </small>
-            </h2>
-          </div>
-          <div class="text-sm">
-            <p class="pt-2">
-              ４月５日（火）１６：４０ＰＭ～です。<br />
-              自信を持って新学期を迎えましょう！<br />
-            </p>
-
-            <p class="pt-4">詳細はご連絡ください。</p>
-          </div>
-        </div>
-      </article>
+    <div class="px-4 pt-8 md:pt-16 md:pl-16 xl:mx-64">
+      <div>
+        {
+          sortedEntries.map((item) => (
+            <article class="border-b-2 border-gray-300 pt-8 pb-8 tracking-wide">
+              <div class="flex items-baseline ">
+                <h2 class="font-bold text-slate-800">
+                  {item.frontmatter.title}
+                  <small class="pl-1 text-xs tracking-tighter text-slate-300">
+                    {item.frontmatter.publishDate}
+                  </small>
+                </h2>
+              </div>
+              <div class="prose prose-slate prose-p:leading-normal prose-ul:m-0  prose-ul:list-none prose-ul:rounded-lg prose-ul:bg-sky-100 prose-ul:p-0 prose-ul:py-4 prose-ul:text-sm mt-4">
+                <item.Content />
+              </div>
+            </article>
+          ))
+        }
+      </div>
     </div>
   </div>
 </Layout>
