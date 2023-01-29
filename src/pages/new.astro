@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro'
+const entries = await Astro.glob('../content/news/*.md')
+const sortedEntries = entries.sort(
+  (a, b) =>
+    Date.parse(b.frontmatter.publishDate) -
+    Date.parse(a.frontmatter.publishDate)
+)
+---
+
+<Layout title="最新情報">
+  <div class="bg-white pb-20 text-gray-900">
+    <h2 class="mx-4 my-4 text-xl">最新情報</h2>
+    <div class="px-4 pt-8 md:pt-16 md:pl-16 xl:mx-64">
+      <div>
+        {
+          sortedEntries.map((item) => (
+            <article class="border-b-2 border-gray-300 pt-8 pb-8 tracking-wide">
+              <div class="flex items-baseline ">
+                <h2 class="font-bold text-slate-800">
+                  {item.frontmatter.title}
+                  <small class="pl-1 text-xs tracking-tighter text-slate-300">
+                    {item.frontmatter.publishDate}
+                  </small>
+                </h2>
+              </div>
+              <div class="prose prose-slate prose-p:leading-normal prose-ul:list-none  prose-ul:rounded-lg prose-ul:bg-sky-100 prose-ul:py-4 prose-ul:text-sm mt-4">
+                <item.Content />
+              </div>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</Layout>

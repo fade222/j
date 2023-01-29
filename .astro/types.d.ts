@@ -44,10 +44,10 @@ declare module 'astro:content' {
 	): E extends ValidEntrySlug<C>
 		? Promise<CollectionEntry<C>>
 		: Promise<CollectionEntry<C> | undefined>;
-	export function getCollection<C extends keyof typeof entryMap>(
+	export function getCollection<C extends keyof typeof entryMap, E extends CollectionEntry<C>>(
 		collection: C,
-		filter?: (data: CollectionEntry<C>) => boolean
-	): Promise<CollectionEntry<C>[]>;
+		filter?: (entry: CollectionEntry<C>) => entry is E
+	): Promise<E[]>;
 
 	type InferEntrySchema<C extends keyof typeof entryMap> = import('astro/zod').infer<
 		Required<ContentConfig['collections'][C]>['schema']
@@ -63,37 +63,37 @@ declare module 'astro:content' {
 
 	const entryMap: {
 		"news": {
-"20220410.md": {
-  id: "20220410.md",
-  slug: "20220410",
+"2022-04-10.md": {
+  id: "2022-04-10.md",
+  slug: "2022-04-10",
   body: string,
   collection: "news",
-  data: any
+  data: InferEntrySchema<"news">
 },
-"20220507.md": {
-  id: "20220507.md",
-  slug: "20220507",
+"2022-05-07.md": {
+  id: "2022-05-07.md",
+  slug: "2022-05-07",
   body: string,
   collection: "news",
-  data: any
+  data: InferEntrySchema<"news">
 },
-"20220822.md": {
-  id: "20220822.md",
-  slug: "20220822",
+"2022-08-22.md": {
+  id: "2022-08-22.md",
+  slug: "2022-08-22",
   body: string,
   collection: "news",
-  data: any
+  data: InferEntrySchema<"news">
 },
-"20221221.md": {
-  id: "20221221.md",
-  slug: "20221221",
+"2022-12-21.md": {
+  id: "2022-12-21.md",
+  slug: "2022-12-21",
   body: string,
   collection: "news",
-  data: any
+  data: InferEntrySchema<"news">
 },
 },
 
 	};
 
-	type ContentConfig = never;
+	type ContentConfig = typeof import("../src/content/config");
 }
