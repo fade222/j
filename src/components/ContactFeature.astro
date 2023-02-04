@@ -1,3 +1,7 @@
+---
+import ButtonLarge from './ButtonLarge.astro'
+---
+
 <section class="flex">
   <div class="ml-auto mr-auto bg-white text-slate-800">
     <div class="pt-12 pl-8">
@@ -32,16 +36,7 @@
     <p class="mx-4 text-base">北口商店街をまっすぐ、歯科クリニックの２階</p>
 
     <div class="mt-16 text-center">
-      <a
-        href="https://goo.gl/maps/pmRWrutndk3uKLSc6"
-        class="group relative inline-flex items-center justify-center rounded-lg bg-gradient-to-br from-cyan-500 via-blue-500 to-indigo-700 p-0.5 text-base text-blue-600 hover:text-white focus:outline-none focus:ring-4 focus:ring-blue-300"
-      >
-        <span
-          class="relative rounded-md bg-white px-8 py-2.5 transition-all duration-75 ease-in group-hover:bg-opacity-0"
-        >
-          Googleマップで開く
-        </span>
-      </a>
+      <ButtonLarge name="Googleマップで開く" />
     </div>
     <div class="pt-6"></div>
   </div>

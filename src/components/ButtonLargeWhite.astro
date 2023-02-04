@@ -1,0 +1,17 @@
+---
+interface Props {
+  name: string
+}
+
+const { greeting = 'Hello', name } = Astro.props
+---
+
+<a
+  href="/study"
+  class="group relative inline-flex items-center justify-center rounded-lg bg-gradient-to-br from-cyan-500 via-blue-500 to-indigo-700 p-0.5 text-xl text-blue-600 hover:text-white focus:outline-none focus:ring-4 focus:ring-blue-300"
+>
+  <span
+    class="relative rounded-md bg-white transition-all duration-75 ease-in group-hover:bg-opacity-0"
+    >{name}</span
+  >
+</a>

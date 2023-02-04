@@ -1,3 +1,7 @@
+---
+import ButtonLarge from './ButtonLarge.astro'
+---
+
 <!-- background -->
 <section
   class="relative inset-0 overflow-hidden bg-[url(../images/rainbow-sq.jpg)] bg-[length:480px_480px] bg-center bg-no-repeat md:bg-[length:652px_452px] md:text-center lg:bg-[url(../images/rainbow-rec.jpg)]"
@@ -46,29 +50,22 @@
     の実績あり。
   </p>
 
-  <p class="mx-4 pt-12 text-center text-xl text-slate-800">
+  <p class="relative mx-4 pt-12 text-center text-xl text-slate-800">
     学校の授業で苦手な所 があっても、
     <span class="break-keep px-1 font-bold">マンツーマン</span>
     で克服し学力を伸ばせます。
   </p>
 
   <!-- button -->
-  <div class="mt-16 text-center">
-    <a
-      href="/study"
-      class="group relative inline-flex items-center justify-center rounded-lg bg-gradient-to-br from-cyan-500 via-blue-500 to-indigo-700 p-0.5 text-xl text-blue-600 hover:text-white focus:outline-none focus:ring-4 focus:ring-blue-300"
-    >
-      <span
-        class="relative rounded-md bg-white px-12 py-2.5 transition-all duration-75 ease-in group-hover:bg-opacity-0"
-        >学習科</span
-      >
-      <img
-        alt=""
-        class="absolute top-1/2 left-1/2 inline-block h-16 w-16 translate-y-3 -translate-x-full rotate-[30deg] opacity-90"
-        src="../images/arrow-fat.svg"
-      />
-    </a>
-    <!-- spacer -->
-    <div class="py-12"></div>
+  <div class="relative mt-16 text-center">
+    <ButtonLarge name="学習科" />
+
+    <img
+      alt=""
+      class="absolute inline-block h-16 w-16 -translate-x-24 translate-y-12 rotate-[-15deg] opacity-90"
+      src="../images/arrow-fat.svg"
+    />
   </div>
+  <!-- spacer -->
+  <div class="py-12"></div>
 </section>
