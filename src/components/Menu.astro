@@ -17,7 +17,7 @@ import PatternLines from './PatternLines.astro'
       <title>メニューを開く</title>
     </svg>
   </button>
-  <section
+  <div
     id="menu"
     class="hide-menu border-primary-main invisible fixed top-0 left-0 z-10 flex h-full w-full bg-black/75 transition-transform"
   >
@@ -49,48 +49,47 @@ import PatternLines from './PatternLines.astro'
         <PatternLines />
       </div>
     </div>
-
-    <script>
-      // @ts-nocheck
-      const closeMenu = () => {
-        const menuElem = document.querySelector('#menu')
-        menuElem.classList.remove('show-menu', 'visible')
-        menuElem.classList.add('hide-menu', 'invisible')
-        document.body.style.overflow = 'auto'
-      }
-
-      document.querySelector('#menu-open').addEventListener('click', () => {
-        const menuElem = document.querySelector('#menu')
-        menuElem.classList.remove('hide-menu', 'invisible')
-        menuElem.classList.add('show-menu', 'visible')
-        document.body.style.overflow = 'hidden'
-
-        document.addEventListener('keydown', (evt) => {
-          if (evt.key === 'Escape') {
-            closeMenu()
-            document.removeEventListener('keydown', evt)
-          }
-        })
-
-        document
-          .querySelector('#menu-outside')
-          .addEventListener('click', () => {
-            closeMenu()
-          })
-      })
-
-      document.querySelector('#menu-close').addEventListener('click', () => {
-        closeMenu()
-      })
-    </script>
-
-    <style>
-      .hide-menu {
-        transform: translateX(100%);
-      }
-      .show-menu {
-        transform: translateX(0%);
-      }
-    </style>
-  </section>
+  </div>
 </nav>
+
+<script>
+  const closeMenu = () => {
+    const menuElem = document.querySelector('#menu') as HTMLElement
+    menuElem.classList.remove('show-menu', 'visible')
+    menuElem.classList.add('hide-menu', 'invisible')
+    document.body.style.overflow = 'auto'
+  }
+
+  const handleKeydown = (e: KeyboardEvent) => {
+    if (e.key === 'Escape') {
+      closeMenu()
+      document.removeEventListener('keydown', handleKeydown)
+    }
+  }
+
+  document.querySelector('#menu-open')!.addEventListener('click', () => {
+    const menuElem = document.querySelector('#menu') as HTMLElement
+    menuElem.classList.remove('hide-menu', 'invisible')
+    menuElem.classList.add('show-menu', 'visible')
+    document.body.style.overflow = 'hidden'
+
+    document.addEventListener('keydown', handleKeydown)
+
+    document.querySelector('#menu-outside')!.addEventListener('click', () => {
+      closeMenu()
+    })
+  })
+
+  document.querySelector('#menu-close')!.addEventListener('click', () => {
+    closeMenu()
+  })
+</script>
+
+<style>
+  .hide-menu {
+    transform: translateX(100%);
+  }
+  .show-menu {
+    transform: translateX(0%);
+  }
+</style>
