@@ -1,109 +1,60 @@
+---
+import MenuLink from './MenuLink.astro'
+---
+
 <div>
   <p class="text-sm">Classes</p>
   <ul class="[&>li]:p-2">
-    <li>
-      <img
-        class="mr-2 inline-block h-6 w-6"
-        src="../images/icon-koma.svg"
-        alt=""
-      />
-      <a
-        class="animated-link rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-300"
-        href="/soroban">珠算科</a
-      >
-    </li>
-    <li>
-      <img
-        class="mr-2 inline-block h-6 w-6"
-        src="../images/icon-pencil.svg"
-        alt=""
-      />
-      <a
-        class="animated-link rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-300"
-        href="/study"
-      >
-        学習科</a
-      >
-    </li>
-    <li>
-      <img
-        class="mr-2 inline-block h-6 w-6"
-        src="../images/icon-book.svg"
-        alt=""
-      />
-      <a
-        class="animated-link rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-300"
-        href="/reading"
-      >
-        読書科</a
-      >
-    </li>
+    <MenuLink
+      iconPath="../images/icon-koma.svg"
+      slug="soroban"
+      pageName="珠算科"
+    />
+    <MenuLink
+      iconPath="../images/icon-pencil.svg"
+      slug="study"
+      pageName="学習科"
+    />
+    <MenuLink
+      iconPath="../images/icon-book.svg"
+      slug="reading"
+      pageName="読書科"
+    />
   </ul>
 </div>
 
 <div>
   <p class="mt-4 text-sm md:mt-0">About us</p>
   <ul class="[&>li]:p-2">
-    <li>
-      <img
-        class="mr-2 inline-block h-6 w-6"
-        src="../images/icon-saftey.svg"
-        alt=""
-      />
-      <a
-        class="animated-link rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-300"
-        href="/safety">安全性</a
-      >
-    </li>
-    <li>
-      <img
-        class="mr-2 inline-block h-6 w-6"
-        src="../images/icon-company.svg"
-        alt=""
-      />
-      <a
-        class="animated-link rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-300"
-        href="/company">会社概要</a
-      >
-    </li>
-    <li>
-      <img
-        class="mr-2 inline-block h-6 w-6"
-        src="../images/icon-star.svg"
-        alt=""
-      />
-      <a
-        class="animated-link rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-300"
-        href="/news">最新情報</a
-      >
-    </li>
+    <MenuLink
+      iconPath="../images/icon-saftey.svg"
+      pageName="安全性"
+      slug="safety"
+    />
+    <MenuLink
+      iconPath="../images/icon-company.svg"
+      pageName="会社概要"
+      slug="company"
+    />
+    <MenuLink
+      iconPath="../images/icon-star.svg"
+      pageName="最新情報"
+      slug="news"
+    />
   </ul>
 </div>
 
 <div>
   <p class="mt-4 text-sm md:mt-0">Contact</p>
   <ul class="[&>li]:p-2">
-    <li>
-      <img
-        class="mr-2 inline-block h-6 w-6"
-        src="../images/icon-trial.svg"
-        alt=""
-      />
-      <a
-        class="animated-link rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-300"
-        href="/free-trial">無料体験</a
-      >
-    </li>
-    <li>
-      <img
-        class="mr-2 inline-block h-6 w-6"
-        src="../images/icon-phone.svg"
-        alt=""
-      />
-      <a
-        class="animated-link rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-300"
-        href="/contact">お問い合わせ</a
-      >
-    </li>
+    <MenuLink
+      iconPath="../images/icon-trial.svg"
+      pageName="無料体験"
+      slug="free-trial"
+    /><MenuLink
+      iconPath="../images/icon-phone.svg"
+      pageName="お問い合わせ"
+      slug="contact"
+    />
   </ul>
 </div>

@@ -1,0 +1,26 @@
+---
+interface Props {
+  iconPath: string
+  pageName: string
+  slug: string
+}
+
+const { iconPath, slug, pageName } = Astro.props
+
+const pathname = new URL(Astro.request.url).pathname
+const currentPath = pathname.slice(1) // remove the first "/"
+---
+
+<li>
+  <img class="mr-2 inline-block h-6 w-6" src={iconPath} alt="" />
+  <a
+    class={currentPath === slug
+      ? 'active rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-300 underline decoration-sky-500 decoration-dotted underline-offset-4'
+      : 'animated-link rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-300'}
+    href={currentPath === slug ? '#main' : '/' + slug}
+    ><span class="sr-only">
+      {currentPath === slug ? '現在のページ: ' : ''}
+    </span>
+    {pageName}</a
+  >
+</li>
