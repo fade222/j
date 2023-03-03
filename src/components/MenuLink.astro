@@ -7,8 +7,7 @@ interface Props {
 
 const { iconPath, slug, pageName } = Astro.props
 
-const pathname = new URL(Astro.request.url).pathname
-const currentPath = pathname.slice(1) // remove the first "/"
+const currentPath = Astro.url.pathname.slice(1)
 ---
 
 <li>
