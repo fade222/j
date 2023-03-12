@@ -24,7 +24,11 @@ import ButtonLarge from './ButtonLarge.astro'
           okayama5060@hotmail.co.jp
         </a>
       </div>
-      <p class="pt-12 text-base">東急目黒線・大井町線 大岡山駅から徒歩３分</p>
+      <p class="pt-12 text-center text-base">
+        東急目黒線・大井町線 <span class="break-keep md:break-normal">
+          大岡山駅から徒歩３分</span
+        >
+      </p>
     </div>
     <img
       width="400"
@@ -32,11 +36,19 @@ import ButtonLarge from './ButtonLarge.astro'
       src="/../images/map.svg"
       alt="大岡山駅から当塾の行き方の地図"
     />
-
-    <p class="mx-4 text-base">北口商店街をまっすぐ、歯科クリニックの２階</p>
+    <div class="">
+      <p class="mx-4 text-center text-base md:text-left">
+        北口商店街をまっすぐ、<span class="break-keep md:break-normal">
+          歯科クリニックの２階</span
+        >
+      </p>
+    </div>
 
     <div class="mt-16 text-center">
-      <ButtonLarge name="Googleマップで開く" />
+      <ButtonLarge
+        link="https://www.google.com/maps/place/Ookayama+School/@35.60826,139.6851219,17z/data=!4m6!3m5!1s0x6018f532289dcf47:0x77afc0c5c2740e81!8m2!3d35.6096814!4d139.6856678!16s%2Fg%2F1v_s5x_q"
+        name="Googleマップで開く"
+      />
     </div>
     <div class="pt-6"></div>
   </div>
