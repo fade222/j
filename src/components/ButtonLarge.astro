@@ -1,13 +1,14 @@
 ---
 interface Props {
   name: string
+  link: string
 }
 
-const { name } = Astro.props
+const { name, link } = Astro.props
 ---
 
 <a
-  href="/study"
+  href={link}
   class="group inline-flex items-center justify-center rounded-lg bg-gradient-to-br from-cyan-500 via-blue-500 to-indigo-700 px-12 py-2.5 text-xl text-white hover:bg-gradient-to-br hover:from-cyan-500 hover:via-blue-500 hover:to-indigo-800 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-blue-300"
 >
   {name}
