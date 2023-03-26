@@ -4,24 +4,26 @@
 
 ## 🚀 Project Goals
 
-1. Mobile first design✅
-2. Simplify navigation✅
-3. Improve accessibly✅
-4. Increase colour vibrancy and contrast✅
-5. Improve copy and implement Google Ads✅
-6. 100% lighthouse scores for desktop and mobile devices✅
-7. Utilise markdown files for easily updatable articles✅
+- Improve accessibly✅
+- Mobile first design✅
+- Simplify navigation✅
+- Refresh icon design✅
+- Increase colour vibrancy and contrast✅
+- Improve copy and implement Google Ads✅
+- Utilise markdown files for easily updatable articles✅
+- 100% lighthouse scores for desktop and mobile devices✅
 
 ## 🛠️ Tools
 
 **Development**
 
+- Git
 - Astro
-- Typescript
-- Tailwind
-- Markdown
 - ESLint
 - VS Code
+- Markdown
+- Tailwind
+- Typescript
 
 **Deployment**
 
@@ -30,23 +32,18 @@
 
 **Design**
 
-- Icons designed made Figma
-- Images designed made Figma
-- Site mockups made Figma
+- Icons made in Figma
+- Images made in Figma
+- Site mockups made in Figma
 
 ## ♿ Accessability
 
-**Navigation**
-
+- Semantic HTML
 - Skip to main
 - Escape to close menu
 - Click outside to close menu
-
-**Screen Reader**
-
-- Semantic HTML
-- Current page in menu
-- Current page in footer
+- Current page in menu for screen readers
+- Current page in footer for screen readers
 
 ## 📰 News Articles
 
