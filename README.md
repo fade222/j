@@ -2,18 +2,18 @@
 
 > [www.ookayamaschool.co.jp](https://ookayamaschool.co.jp/)
 
-## 🚀 Project Goals
+## Project Goals
 
-- Improve accessibly✅
-- Mobile first design✅
-- Simplify navigation✅
-- Refresh icon design✅
-- Increase colour vibrancy and contrast✅
-- Improve copy and implement Google Ads✅
-- Utilise markdown files for easily updatable articles✅
-- 100% lighthouse scores for desktop and mobile devices✅
+- Improve accessibly
+- Mobile first design
+- Simplify navigation
+- Refresh icon design
+- Increase colour vibrancy and contrast
+- Improve copy and implement Google Ads
+- Utilise markdown files for easily updatable articles
+- 100% lighthouse scores for desktop and mobile devices
 
-## 🛠️ Tools
+## Tools
 
 **Development**
 
@@ -36,7 +36,7 @@
 - Images made in Figma
 - Site mockups made in Figma
 
-## ♿ Accessability
+## Accessability
 
 - Semantic HTML
 - Skip to main
@@ -45,7 +45,7 @@
 - Current page in menu for screen readers
 - Current page in footer for screen readers
 
-## 📰 News Articles
+## Adding Articles to the News Page
 
 Add markdown files to the news folder to add articles to the news page
 
@@ -66,7 +66,7 @@ Add markdown files to the news folder to add articles to the news page
 └── package.json
 ```
 
-## 🧞 Commands
+## Commands
 
 All commands are run from the root of the project, from a terminal:
 
