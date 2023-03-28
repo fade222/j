@@ -9,9 +9,10 @@
 - Simplify navigation
 - Refresh icon design
 - Increase colour vibrancy and contrast
-- Improve copy and implement Google Ads
 - Utilise markdown files for easily updatable articles
-- 100% lighthouse scores for desktop and mobile devices
+- 100% Lighthouse scores for desktop and mobile devices
+- Implement Google Ads
+- Improve copy
 
 ## Tools
 
@@ -39,7 +40,8 @@
 ## Accessability
 
 - Semantic HTML
-- Skip to main
+- Skip to main link
+- Increased contrast
 - Escape to close menu
 - Click outside to close menu
 - Current page in menu for screen readers
