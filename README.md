@@ -44,8 +44,7 @@
 - Increased contrast
 - Escape to close menu
 - Click outside to close menu
-- Current page in menu for screen readers
-- Current page in footer for screen readers
+- Current page in menu and footer for screen readers
 
 ## Adding Articles to the News Page
 
