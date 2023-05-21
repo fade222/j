@@ -21,4 +21,5 @@ debug.log*
 
 #astro types folder
 .astro/
+astro/
 
