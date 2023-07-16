@@ -109,6 +109,13 @@ declare module 'astro:content' {
   collection: "news",
   data: InferEntrySchema<"news">
 },
+"2023-07-17.md": {
+  id: "2023-07-17.md",
+  slug: "2023-07-17",
+  body: string,
+  collection: "news",
+  data: InferEntrySchema<"news">
+},
 },
 
 	};
